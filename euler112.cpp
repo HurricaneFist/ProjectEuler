@@ -8,7 +8,7 @@ int digit_at(int n, int i) {
 
 bool bouncy(int n) {
 	int k = (int) log10(n) + 1, digits[k], order = -1;
-	enum direction { INCREASING, DECREASING };
+	enum { INCREASING, DECREASING };
 	
 	for (int i = k-1, j = 1; i >= 0; i--, j++)
 		digits[i] = digit_at(n, j);
