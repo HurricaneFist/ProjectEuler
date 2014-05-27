@@ -2,3 +2,6 @@
 *.exe
 *.java
 *.o
+
+# unfinished solutions
+euler041.cpp
