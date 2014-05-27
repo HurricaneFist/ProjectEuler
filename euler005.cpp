@@ -8,10 +8,9 @@ int main() {
 		for (int j = 1; j <= 20; j++) {
 			if (i % j)
 				break;
-			if (j == 20) {
-				goto outside;
-			}
+			if (j == 20)
+				goto outer;
 		}
 	
-	outside: cout << i;
+	outer: cout << i;
 }
