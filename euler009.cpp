@@ -1,15 +1,13 @@
 #include <iostream>
 using namespace std;
-// on the slow side
 
 int main() {
-	int a = 1, b = 1, c = 1;
-	
-	while (a++)
-		while (b++)
-			while (c++)
-				if (a*a + b*b == c*c && a+b+c == 1000)
-					goto outside;
-	
-	outside: cout << a*b*c;
+	for (int a = 1; a < 500; a++)
+		for (int b = a; b < 1000; b++) {
+			int c = 1000 - a - b;
+			if (a*a + b*b == c*c) {
+				cout << a * b * c;
+				return 0;
+			}
+		}
 }
